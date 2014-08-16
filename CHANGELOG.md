@@ -9,6 +9,7 @@
 
 # wide2 branch / Unreleased
   * [Fixed] #246 Gaps when filtering in hide mode (patch by @lefunque)
+  * [Fixed] #287 wrong image on hovers
 
 
 # 2.2.0 / 2014-06-28
