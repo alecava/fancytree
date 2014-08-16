@@ -70,7 +70,7 @@ module.exports = (grunt) ->
                 # "lib/intro.js"
                 "src/jquery.fancytree.js"
                 "src/jquery.fancytree.childcounter.js"
-#                "src/jquery.fancytree.clones.js"
+               "src/jquery.fancytree.clones.js"
 #                "src/jquery.fancytree.columnview.js"
                 "src/jquery.fancytree.dnd.js"
                 "src/jquery.fancytree.edit.js"
@@ -102,7 +102,7 @@ module.exports = (grunt) ->
                 "lib/intro.js"
                 "build/jquery.fancytree.min.js"
                 "build/jquery.fancytree.childcounter.min.js"
-#                "build/jquery.fancytree.clones.min.js"
+               "build/jquery.fancytree.clones.min.js"
 #                "build/jquery.fancytree.columnview.min.js"
                 "build/jquery.fancytree.dnd.min.js"
                 "build/jquery.fancytree.edit.min.js"
@@ -326,7 +326,7 @@ module.exports = (grunt) ->
     yabs:
         release:
             common: # defaults for all tools
-                manifests: ['package.json', 'bower.json', 'fancytree.jquery.json']
+              manifests: ['package.json', 'bower.json', 'fancytree.jquery.json']
             # The following tools are run in order:
             check: { clean: true, branch: ['master'] }
             run_test: { tasks: ['test'] }
@@ -335,6 +335,9 @@ module.exports = (grunt) ->
             commit: { add: '.' }
             tag: {}
             push: { tags: true }
+            githubRelease:
+              repo: "mar10/fancytree"
+              draft: false
             bump_develop: { inc: 'prepatch' }
             commit_develop: { add: '.', message: 'Bump prerelease ({%= version %}) [ci skip]' }
             push_develop: { tags: true }
